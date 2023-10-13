@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+
+
+class BankAccount{
+	constructor(accnum,balance){
+		this.accnum=accnum;
+		this.balance=balance;
+		
+	}
+	
+	
+	deposit(userAmount1){
+		document.write(`--------deposit--------`)
+		document.write(`<br><br>Your Account Balance : ${this.balance}`)
+		
+		this.balance+=userAmount1;
+		document.write(`<br>Your Account Number : ${this.accnum} your Deposit Amount: ${userAmount1}.Rs Current Balance is :${this.balance}.Rs`)
+	}
+	
+	withdraw(userAmount2){
+		document.write(`<br><br>--------withdraw--------`)
+		document.write(`<br><br>Your Account Balance : ${this.balance}`)
+		
+		if(this.balance>userAmount2){
+			this.balance-=userAmount2
+			
+			document.write(`<br>Your Account Number : ${this.accnum} Your Withdraw Amount ${userAmount2}.Rs Balance is :${this.balance}.Rs`)
+		}
+		else{
+			document.write(`<br><br>Insuficiance Balance `)
+		}
+	}
+	
+
+	
+}
+
+let res1=new BankAccount(1023034045,1200)
+
+let res2=new BankAccount(2443556567,12000)
+
+
+
+let userAmount1=parseInt(prompt("Enter a deposit amount"));
+let userAmount2=parseInt(prompt("Enter a withdraw amount"));
+
+res1.deposit(userAmount1)
+res2.withdraw(userAmount2)
+
+</script>
+</body>
+</html>
